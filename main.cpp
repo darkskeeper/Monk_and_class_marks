@@ -10,14 +10,14 @@ int main()
     cin >> T;
     int mark;
     string name;
-    set < pair <int, string> > s;
+    multiset < pair <int, string> > s;
     while ( T-- )
     {
         cin >> name;
         cin >> mark;
         s.insert( pair < int, string > (100 - mark, name) );
     }
-    set < pair < int, string > >::iterator it;
+    multiset < pair < int, string > >::iterator it;
     for ( it = s.begin() ; it != s.end() ; ++it )
     {
         cout << it->second << " " << 100 - it->first << endl;
